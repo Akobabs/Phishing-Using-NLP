@@ -11,16 +11,16 @@
 **Top Phishing Trigrams**: [(('forward', 'looking', 'statement'), 1619), (('statement', 'within', 'meaning'), 661), (('www', 'computron', 'com'), 627), (('phone', 'mobile', 'email'), 508), (('security', 'act', 'section'), 503), (('forward', 'ooking', 'statement'), 486), (('security', 'exchange', 'act'), 476), (('nbsp', 'nbsp', 'nbsp'), 470), (('within', 'meaning', 'section'), 466), (('number', 'risk', 'uncertainty'), 461)]
 **Top Legitimate Trigrams**: [(('hou', 'ect', 'ect'), 13107), (('ect', 'ect', 'subject'), 3468), (('corp', 'enron', 'enron'), 2393), (('please', 'let', 'know'), 2009), (('vince', 'kaminski', 'hou'), 1678), (('kaminski', 'hou', 'ect'), 1678), (('lon', 'ect', 'ect'), 1646), (('copyright', 'dow', 'jones'), 1500), (('dow', 'jones', 'company'), 1125), (('jones', 'company', 'inc'), 1124)]
 ## PhishTank
-**Summary**: {'Size': 64323, 'Columns': ['text', 'label', 'url'], 'Missing Values': {'text': 0, 'label': 0, 'url': 0}, 'Duplicates': np.int64(0)}
-**Label Distribution**: {1: 64323}
-**Text Stats**: {'Char Length Mean': np.float64(47.07777933243163), 'Char Length Median': np.float64(27.0), 'Word Length Mean': np.float64(2.08034451129456), 'Word Length Median': np.float64(1.0)}
-**Top Phishing Words**: [('amp', 12313), ('false', 10341), ('start', 5552), ('loop', 5480), ('delayms', 5479), ('3000', 5277), ('slide', 1481), ('id.p', 1447), ('true', 833), ('rlkey', 443)]
+**Summary**: {'Size': 64157, 'Columns': ['text', 'label', 'url'], 'Missing Values': {'text': 0, 'label': 0, 'url': 0}, 'Duplicates': np.int64(0)}
+**Label Distribution**: {1: 64157}
+**Text Stats**: {'Char Length Mean': np.float64(46.80974796203064), 'Char Length Median': np.float64(27.0), 'Word Length Mean': np.float64(2.772246208519725), 'Word Length Median': np.float64(1.0)}
+**Top Phishing Words**: [('amp', 12313), ('false', 10341), ('start', 5753), ('loop', 5480), ('delayms', 5479), ('3000', 5277), ('docs.google.com/presentation/d/e/2pacx', 5042), ('pub', 2490), ('slide', 1481), ('id.p', 1447)]
 **Top Legitimate Words**: []
 **Top Phishing Bigrams**: [(('false', 'amp'), 8142), (('delayms', '3000'), 5273), (('loop', 'false'), 5167), (('start', 'false'), 5130), (('amp', 'loop'), 4370), (('amp', 'delayms'), 4370), (('slide', 'id.p'), 1444), (('false', 'delayms'), 1074), (('false', 'loop'), 1061), (('amp', 'slide'), 905)]
 **Top Legitimate Bigrams**: []
 **Top Phishing Trigrams**: [(('amp', 'delayms', '3000'), 4197), (('amp', 'loop', 'false'), 4089), (('loop', 'false', 'amp'), 4088), (('false', 'amp', 'delayms'), 4084), (('start', 'false', 'amp'), 4047), (('false', 'amp', 'loop'), 4038), (('loop', 'false', 'delayms'), 1074), (('start', 'false', 'loop'), 1061), (('false', 'loop', 'false'), 1060), (('false', 'delayms', '3000'), 1050)]
 **Top Legitimate Trigrams**: []
-**URL Stats**: {}
+**URL Stats**: {'Top TLDs': {'com': 26425, 'io': 4504, 'xin': 4442, 'dev': 3199, 'ly': 2948, 'app': 2749, 'de': 2602, 'me': 2573, 'to': 1965, 'vip': 1956}, 'Domain Length Mean': np.float64(20.188178998394562), 'Domain Length Median': np.float64(19.0)}
 ## UCI
 **Summary**: {'Size': 5849, 'Columns': ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report', 'label'], 'Missing Values': {'having_IP_Address': 0, 'URL_Length': 0, 'Shortining_Service': 0, 'having_At_Symbol': 0, 'double_slash_redirecting': 0, 'Prefix_Suffix': 0, 'having_Sub_Domain': 0, 'SSLfinal_State': 0, 'Domain_registeration_length': 0, 'Favicon': 0, 'port': 0, 'HTTPS_token': 0, 'Request_URL': 0, 'URL_of_Anchor': 0, 'Links_in_tags': 0, 'SFH': 0, 'Submitting_to_email': 0, 'Abnormal_URL': 0, 'Redirect': 0, 'on_mouseover': 0, 'RightClick': 0, 'popUpWidnow': 0, 'Iframe': 0, 'age_of_domain': 0, 'DNSRecord': 0, 'web_traffic': 0, 'Page_Rank': 0, 'Google_Index': 0, 'Links_pointing_to_page': 0, 'Statistical_report': 0, 'label': 0}, 'Duplicates': np.int64(0)}
 **Label Distribution**: {1: 3019, 0: 2830}
@@ -89,17 +89,17 @@ on_mouseover                   0.004109
 port                           0.002893
 Iframe                         0.002882
 RightClick                     0.001881
-## Combined (Enron + PhishTank)
+## Combined (Enron + PhishTank - Pre-SMOTE)
 **Summary**: {'Size': 57860, 'Columns': ['text', 'label'], 'Missing Values': {'text': 0, 'label': 0}, 'Duplicates': np.int64(0)}
 **Label Distribution**: {1: 43412, 0: 14448}
-**Text Stats**: {'Char Length Mean': np.float64(508.4370895264431), 'Char Length Median': np.float64(116.0), 'Word Length Mean': np.float64(68.53486000691323), 'Word Length Median': np.float64(9.0)}
-**Top Phishing Words**: [('company', 11822), ('com', 9786), ('http', 7622), ('email', 7263), ('information', 6506), ('please', 6194), ('price', 6193), ('statement', 6019), ('security', 5434), ('amp', 5403)]
+**Text Stats**: {'Char Length Mean': np.float64(508.56011061182164), 'Char Length Median': np.float64(119.0), 'Word Length Mean': np.float64(68.90058762530245), 'Word Length Median': np.float64(11.0)}
+**Top Phishing Words**: [('company', 11823), ('com', 10216), ('http', 7633), ('email', 7298), ('information', 6507), ('please', 6196), ('price', 6193), ('statement', 6020), ('amp', 5653), ('security', 5440)]
 **Top Legitimate Words**: [('enron', 52435), ('ect', 33917), ('hou', 16243), ('please', 12110), ('company', 11847), ('com', 11739), ('would', 11431), ('subject', 11421), ('said', 8903), ('energy', 8736)]
-**Top Phishing Bigrams**: [(('false', 'amp'), 3623), (('http', 'www'), 3147), (('delayms', '3000'), 2314), (('loop', 'false'), 2275), (('start', 'false'), 2269), (('amp', 'loop'), 1922), (('amp', 'delayms'), 1921), (('looking', 'statement'), 1920), (('forward', 'looking'), 1668), (('investment', 'advice'), 1279)]
+**Top Phishing Bigrams**: [(('false', 'amp'), 3699), (('http', 'www'), 3147), (('delayms', '3000'), 2404), (('loop', 'false'), 2356), (('start', 'false'), 2339), (('amp', 'loop'), 1991), (('amp', 'delayms'), 1991), (('looking', 'statement'), 1920), (('forward', 'looking'), 1668), (('investment', 'advice'), 1279)]
 **Top Legitimate Bigrams**: [(('hou', 'ect'), 15523), (('ect', 'ect'), 15175), (('enron', 'enron'), 5935), (('enron', 'com'), 4185), (('let', 'know'), 3997), (('vince', 'kaminski'), 3881), (('original', 'message'), 3667), (('ect', 'subject'), 3583), (('corp', 'enron'), 3081), (('dow', 'jones'), 2399)]
-**Top Phishing Trigrams**: [(('amp', 'delayms', '3000'), 1850), (('amp', 'loop', 'false'), 1817), (('loop', 'false', 'amp'), 1816), (('false', 'amp', 'delayms'), 1814), (('start', 'false', 'amp'), 1803), (('false', 'amp', 'loop'), 1798), (('forward', 'looking', 'statement'), 1619), (('statement', 'within', 'meaning'), 661), (('www', 'computron', 'com'), 627), (('phone', 'mobile', 'email'), 508)]
+**Top Phishing Trigrams**: [(('amp', 'delayms', '3000'), 1909), (('amp', 'loop', 'false'), 1859), (('loop', 'false', 'amp'), 1858), (('false', 'amp', 'delayms'), 1855), (('start', 'false', 'amp'), 1838), (('false', 'amp', 'loop'), 1834), (('forward', 'looking', 'statement'), 1619), (('statement', 'within', 'meaning'), 661), (('www', 'computron', 'com'), 627), (('phone', 'mobile', 'email'), 508)]
 **Top Legitimate Trigrams**: [(('hou', 'ect', 'ect'), 13107), (('ect', 'ect', 'subject'), 3468), (('corp', 'enron', 'enron'), 2393), (('please', 'let', 'know'), 2009), (('vince', 'kaminski', 'hou'), 1678), (('kaminski', 'hou', 'ect'), 1678), (('lon', 'ect', 'ect'), 1646), (('copyright', 'dow', 'jones'), 1500), (('dow', 'jones', 'company'), 1125), (('jones', 'company', 'inc'), 1124)]
 **Token Stats**: {'Token Length Mean': np.float64(512.0), 'Token Length Median': np.float64(512.0), 'Token Length Max': np.int64(512)}
-## Balanced (SMOTE)
-**Summary**: {'Size': 2, 'Columns': ['label'], 'Missing Values': {'label': 0}, 'Duplicates': np.int64(0)}
-**Label Distribution**: {0: 1, 1: 1}
+## Balanced (SMOTE Applied on Combined)
+**Summary**: {'Size': 57860, 'Columns': ['text', 'label'], 'Missing Values': {'text': 0, 'label': 0}, 'Duplicates': np.int64(0)}
+**Label Distribution**: {1: 43412, 0: 14448}
