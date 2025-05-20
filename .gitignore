@@ -1,7 +1,9 @@
 venv/
-data/
+
 .ipynb_checkpoints
 __pycache__/
 0.26.0
 model/
 notebooks/
+*.docx
+*.zip
