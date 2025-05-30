@@ -7,7 +7,6 @@ model/
 notebooks/
 *.docx
 *.zip
-data/intermediate/balanced_processed_dataset.csv
-data/intermediate/processed_dataset.csv
-data/intermediate/uci_processed.csv
-data/processed_dataset.csv
+data/
+*.csv
+*.json
